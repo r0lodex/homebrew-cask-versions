@@ -1,6 +1,6 @@
 cask 'dropbox-beta' do
-  version '80.3.111'
-  sha256 'ddd8ede2bd92747df76a110949f43dd915c34496baf1b575e35cb6b637351a95'
+  version '83.3.123'
+  sha256 '9431db0789a50ca0aff0506c69432776c311cadd43207a355b64355375a20b5d'
 
   # dropbox.com was verified as official when first introduced to the cask
   url "https://www.dropbox.com/download?build=#{version}&plat=mac&type=full"
@@ -12,8 +12,7 @@ cask 'dropbox-beta' do
 
   app 'Dropbox.app'
 
-  uninstall login_item: 'Dropbox',
-            launchctl:  'com.dropbox.DropboxMacUpdate.agent'
+  uninstall launchctl: 'com.dropbox.DropboxMacUpdate.agent'
 
   zap trash: [
                '/Library/DropboxHelperTools',

@@ -1,6 +1,6 @@
 cask 'dotnet-sdk-preview' do
-  version '3.0.100-preview8-013656,d6b24cf2-ca2a-46f4-b6c8-72e851b80e16:c0fb5d8040803f8f88326dfde012ddfa'
-  sha256 'e4af81bf738ef6c4125e9c29dafdb17daa4e1f5c5095e7c1e33c883ba62ddf85'
+  version '3.0.100-rc1-014190,fa3375a4-e275-4730-ac9c-7521ebd53e0b:f911765e7fa24c37153ab11f453db756'
+  sha256 'b7695b64b1efe71188ac61a8242b4aa5c115650e0007a2b6c5fb9234f356faa8'
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
   appcast "https://dotnet.microsoft.com/download/dotnet-core/#{version.major_minor}"

@@ -1,6 +1,6 @@
 cask 'textmate-preview' do
-  version '2.0-rc.29'
-  sha256 '49c14380728d8bf1af1e09298fa616a09ae535f5f106967361b84f6ec81d6249'
+  version '2.0-rc.30'
+  sha256 '8e2aad3bb2ed64c43283e5697629c831dd087a47aecef85c0072d60bde7765bf'
 
   # github.com/textmate/textmate was verified as official when first introduced to the cask
   url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz"
@@ -14,15 +14,13 @@ cask 'textmate-preview' do
   app 'TextMate.app'
   binary "#{appdir}/TextMate.app/Contents/Resources/mate"
 
+  uninstall quit: 'com.macromates.TextMate'
+
   zap trash: [
-               '~/Library/Application Support/Avian',
                '~/Library/Application Support/TextMate',
                '~/Library/Caches/com.macromates.TextMate',
-               '~/Library/Preferences/com.macromates.TextMate.preview.LSSharedFileList.plist',
-               '~/Library/Preferences/com.macromates.TextMate.preview.plist',
                '~/Library/Preferences/com.macromates.TextMate.plist',
-               '~/Library/Preferences/com.macromates.textmate.webpreview.plist',
-               '~/Library/Preferences/com.macromates.textmate.latex_config.plist',
                '~/Library/Saved Application State/com.macromates.TextMate.savedState',
+               '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macromates.textmate.sfl2',
              ]
 end

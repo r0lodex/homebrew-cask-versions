@@ -1,14 +1,13 @@
 cask 'safari-technology-preview' do
-  version '89,041-96201-20190806-0fd0ee8f-c976-47c6-bb96-afc3fee2e4f0'
-
   if MacOS.version <= :mojave
-    url 'https://secure-appldnld.apple.com/STP/041-96198-20190806-e90a9856-9ea6-443d-ac67-ce4eae1a967a/SafariTechnologyPreview.dmg'
-    sha256 '364a0719c8c549caa2277259a20009a0f385fefeb8c7a4679c5daf8126713d7f'
+    version '92,061-15097-20190916-06d7c2d1-66a8-483b-bead-09cb5e377d50'
+    sha256 'ce0f1a9bae282d290fa7b300552c07940e1c869f8a6d663a72c987aac5d372c0'
   else
-    url "https://secure-appldnld.apple.com/STP/#{version.after_comma}/SafariTechnologyPreview.dmg"
-    sha256 'd3bc34a59321f75674ac512d84cfc59d3959c3d15f633776595cd541a4cc5536'
+    version '92,061-15069-20190916-74285052-e548-4772-a7b0-8cbfcf3d83c8'
+    sha256 '10e793cccc7fd560d8070c4b3af62bb08b8c4258a88b0b2963478f8dd8edaa01'
   end
 
+  url "https://secure-appldnld.apple.com/STP/#{version.after_comma}/SafariTechnologyPreview.dmg"
   appcast 'https://developer.apple.com/safari/download/'
   name 'Safari Technology Preview'
   homepage 'https://developer.apple.com/safari/download/'
